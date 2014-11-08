@@ -1,0 +1,58 @@
+body {font-family: calibri;}
+h2 {text-align: center; margin-top:80px; font-size:40px; color:#666;}
+#tags{
+	width: 400px;
+	height: 30px;
+	margin: 0 auto;
+	margin-left: 480px;
+	font-size:15px;
+	padding: 4px;
+	color: #666;
+}
+
+#submit{
+	display: block;
+	margin-top: 10px;
+	margin-left: 640px;
+	height: 30px;
+}
+
+#queryWord{
+	color: #1e0fbe;
+	font-size: 20px;
+	line-height: 18px;
+	font-weight: 800;
+	padding: 10px 10px 10px 2px;
+	text-decoration: underline;
+}
+
+#queryResult{
+	padding: 5px 5px 5px 2px;
+}
+
+#result {
+	display: block;
+	width: 710px;
+	height: auto;
+	margin: 0 auto;
+	word-wrap: break-word;
+}
+
+#box {
+	background-color: #F5F5F5;
+	margin-top: 10px;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	height: 50px;
+	padding-left: 10px;
+	
+}
+
+#box:HOVER{
+	background-color: #CCC;
+}
+
+.b1,.b2,.b3,.b4 {
+	float: left;	
+	margin-right: 50px;
+}
