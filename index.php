@@ -54,5 +54,7 @@ function getResult() {
 <input type="submit" name="Search" id="submit" value="Search" onclick="getResult()">
 
 <div id="result"></div>
+
+<div id="copyright">Developed by Syed Sumair Zafar <br /> Course Code: Comp 6791 <br /> <a href="https://github.com/sumairz/bm25-ranking-php">GitHub Repo</a> <br /> 2014</div>
 </body>
 </html>
