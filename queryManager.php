@@ -64,16 +64,16 @@ foreach ($finalArray as $key=>$fdata) {
 }
 
 arsort($sortedArray);
-//var_dump($sortedArray);
 
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 
 echo "<br /><br />Search time is : <b> ".round($time,2)." microseconds</b>";
+echo "<br />Total documents retrieved: <b>".count($sortedArray)."</b>";
 
 foreach ($sortedArray as $key=>$val)
 {
-	echo "<div id='box'><p class='b1'><b>Doc ID: </b>".$key."</p><p class='b2'><b>BM25 score: </b>".$finalArray[$key]['bm25_score']."</p><p class='b3'><b>Term Freq.: </b>".$finalArray[$key]['tf']."</p><p class='b4'><b>Doc. Freq.: </b>".$finalArray[$key]['df']."</p></div>";
+	echo "<div id='box' onClick='showContent(".$key.")'><p class='b1'><b>Doc ID: </b>".$key."</p><p class='b2'><b>BM25 score: </b>".$finalArray[$key]['bm25_score']."</p><p class='b3'><b>Term Freq.: </b>".$finalArray[$key]['tf']."</p><p class='b4'><b>Doc. Freq.: </b>".$finalArray[$key]['df']."</p></div>";
 }
 
 ?>

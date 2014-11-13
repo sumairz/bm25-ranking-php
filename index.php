@@ -12,13 +12,16 @@
 
 <script type="text/javascript">
 
-function getResult() {
-	
+function getResult() 
+{
 	var searchTerm = $("#tags").val();
 	
 	if(searchTerm.length > 0)
 	{
-		$("#result").html('<img src="loader.gif">');
+		$("#content").css('background-color','#FFF');
+		$("#content").html('');
+		
+		$("#result").html('<img src="loader.gif">')
 		
 		var stringData = "keyword="+searchTerm;
 			
@@ -28,7 +31,7 @@ function getResult() {
 			data: stringData,
 			success: function(data) 
 			{
-				$("#result").html('<p>'+data+'</p>');
+				$("#result").html('<pj>'+data+'</p>');
 			},
 			error: function(data)
 			{
@@ -41,6 +44,28 @@ function getResult() {
 		$("#result").html('<p style="color:red;">Enter a query to search</p>');
 	}
 }
+
+function showContent(docID)
+{
+	var keyword = $('#tags').val();
+	var stringData = "docID="+docID+"&keyword="+keyword;
+	
+	$.ajax({
+		type: 'POST',
+		url: "getContent.php",
+		data: stringData,
+		success: function(data) 
+		{
+			$("#content").css('background-color','#F5F5F5');
+			$("#content").html('<p>'+data+'</p>');
+		},
+		error: function(data)
+		{
+			$("#result").html('<p style="color:red;">Error: '+data+'</p>');
+		}
+	});
+}
+
 </script>
 
 <body>
@@ -54,7 +79,8 @@ function getResult() {
 <input type="submit" name="Search" id="submit" value="Search" onclick="getResult()">
 
 <div id="result"></div>
+<div id="content"></div>
 
-<div id="copyright">Developed by Syed Sumair Zafar <br /> Course Code: Comp 6791 <br /> <a href="https://github.com/sumairz/bm25-ranking-php">GitHub Repo</a> <br /> 2014</div>
+<!-- <div id="copyright">Developed by Syed Sumair Zafar <br /> Course Code: Comp 6791 <br /> <a href="https://github.com/sumairz/bm25-ranking-php">GitHub Repo</a> <br /> 2014</div>  -->
 </body>
 </html>

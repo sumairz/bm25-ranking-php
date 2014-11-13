@@ -32,24 +32,26 @@ h2 {text-align: center; margin-top:80px; font-size:40px; color:#666;}
 
 #result {
 	display: block;
-	width: 710px;
+	width: 700px;
 	height: auto;
 	margin: 0 auto;
 	word-wrap: break-word;
+	float: left;
+	margin-left: 50px;
 }
 
 #box {
 	background-color: #F5F5F5;
-	margin-top: 10px;
+	margin-top: 2px;
 	border-bottom-style: solid;
 	border-bottom-width: thin;
 	height: 50px;
-	padding-left: 10px;
-	
+	padding-left: 10px;	
 }
 
 #box:HOVER{
 	background-color: #CCC;
+	cursor: pointer;
 }
 
 .b1,.b2,.b3,.b4 {
@@ -57,6 +59,18 @@ h2 {text-align: center; margin-top:80px; font-size:40px; color:#666;}
 	margin-right: 50px;
 }
 
+#content {
+	float: right;
+	width: 500px;
+	height: 300px;
+	left: 800px;
+	border-radius: 15px;
+	padding: 20px;
+	font-size: 15px;
+	color: #666;
+	position: fixed;
+	overflow: auto;
+}
 #copyright {
 	text-align: center;
 	color: #666;
